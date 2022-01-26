@@ -1,5 +1,6 @@
 from pynput import keyboard
 from services.control import controlMouseWithKeys
+from services.image_detector import detect_face
 
 def on_press_key(tecla):
     try:
@@ -14,5 +15,6 @@ def main():
     with keyboard.Listener(on_press=on_press_key) as listener:
         listener.join()
 
-main()
+# main()
+detect_face()
 
